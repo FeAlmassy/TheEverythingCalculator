@@ -31,8 +31,9 @@ templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 def home(request: Request):
     """Página inicial: introdução ao TEC e ao autor."""
     return templates.TemplateResponse(
+        request,
         "home.html",
-        {"request": request, "page": "home"},
+        {"page": "home"},
     )
 
 
