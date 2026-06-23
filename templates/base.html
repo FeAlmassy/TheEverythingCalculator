@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %} · TEC</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1><a href="/">TEC</a></h1>
+    <p class="tagline">the everything calculator</p>
+
+    <nav>
+      <a href="/" class="{% if page == 'home' %}active{% endif %}">home</a>
+      <!-- novos módulos entram aqui:
+      <a href="/portfolio" class="{% if page == 'portfolio' %}active{% endif %}">portfolio optimizer</a>
+      <a href="/abate" class="{% if page == 'abate' %}active{% endif %}">abate</a>
+      -->
+    </nav>
+
+    <p class="foot">
+      por <a href="https://github.com/FeAlmassy">fellipe almässy</a>
+    </p>
+  </aside>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>
